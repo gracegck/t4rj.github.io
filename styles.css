@@ -94,7 +94,7 @@ h2 {
 	font-size: 16px;
 }
 
-a.join-button {
+.join-button {
 	border: none;
 	background-color: var(--color-button);
 	padding: 8px 20px;
@@ -111,7 +111,7 @@ a.join-button {
 }
 
 @media (prefers-color-scheme: dark) {
-	a.join-button {
+	.join-button {
 		outline: 2px solid var(--color-outline);
 	}
 }
@@ -203,7 +203,7 @@ nav:has(#tab-select-contact:checked) ~ #contact-section {
 }
 
 #vision-section {
-  border: 25px solid var(--color-bg-tab-vision);
+	border: 25px solid var(--color-bg-tab-vision);
 }
 
 /* GET INVOLVED */
@@ -247,7 +247,7 @@ nav:has(#tab-select-contact:checked) ~ #contact-section {
 }
 
 #contact-section {
-  	border: 25px solid var(--color-bg-tab-contact);
+	border: 25px solid var(--color-bg-tab-contact);
 }
 
 .content-container {
@@ -290,22 +290,22 @@ p a {
 	font-size: 14px;
 }
 
-section > ul > li {
+.tab-content > ul > li {
 	margin-left: 40px;
 }
 
-section > ul > ul > li {
+.tab-content > ul > ul > li {
 	margin-left: 80px;
 }
 
 /* MEDIA QUERIES (SCREEN SIZE RESPONSIVENESS) */
 
 @media (max-width: 1060px) {
-  h2 {
+	h2 {
 		font-size: 14px;
 	}
 
-	button {
+	.join-button {
 		font-size: 16px;
 	}
 }
@@ -315,14 +315,9 @@ section > ul > ul > li {
 		flex-direction: column;
 	}
 
-  	.header-flex {
+	.header-flex {
 		flex-direction: column;
 		margin: 0;
-	}
-
-	.header-flex a {
-		text-align: center;
-		margin-top: 10px;
 	}
 
 	.header-flex div {
@@ -332,57 +327,65 @@ section > ul > ul > li {
 	.header-flex-inner-div {
 		margin: 0;
 	}
+
+	.join-button-container {
+		margin-top: 20px;
+	}
+
+	.join-button {
+		text-align: center;
+	}
 }
 
 @media (max-width: 730px) {
-  	button {
+	.join-button-container {
 		display: none;
 	}
 
 	nav {
-    	display: flex;
+		display: flex;
 		justify-content: center;
 	}
 
-	nav ul {
+	nav .tab-bar {
 		display: grid;
 		padding: 0px;
 		margin-bottom: 20px;
 		grid-template-columns: 200px 200px;
 	}
 
-	nav ul li {
+	nav .tab-bar .tab-label {
 		border-radius: 10px;
 		text-align: center;
 	}
 
-	section {
+	.tab-content {
 		padding: 35px;
 	}
 }
 
 @media (max-width: 420px) {
-	nav ul {
+	nav .tab-bar {
 		display: flex;
 		flex-direction: column;
 	}
 
-	section > ul > li {
+	.tab-content > ul > li {
 		margin-left: 20px;
 	}
 
-	section > ul > ul > li {
+	.tab-content > ul > ul > li {
 		margin-left: 40px;
 	}
 
-	section {
+	.tab-content {
 		padding: 20px;
 	}
 }
 
 @media (max-width: 340px) {
-  	img {
-    	width: 120px;
+	img {
+		width: 120px;
 	}
 
 	header {
@@ -397,7 +400,7 @@ section > ul > ul > li {
 		font-size: 5vw;
 	}
 
-	section {
+	.tab-content {
 		padding: 8px;
 	}
 }
