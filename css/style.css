@@ -2,12 +2,12 @@
 
 /* Colors - Green for the Green Wave (Marea Verde), Purple for the feminist movement, Pink for femininity and compassion. */
 :root{
-	--bg: #f1dbf1;
+	--bg: #f6f1f6;
 	--surface: #D8E2DC;
-	--text: #2a1e38;
+	--text: #451b74;
 	--text-light: #FEc5bb;
-	--accent: #fcd5ce;
-	--accent2: #fcd5ce;
+	--accent: rgba(175, 143, 233, 0.284);
+	--accent2: #bbf3aede;
 	--border: rgba(255, 255, 255, 0.8);
 	--radius: 18px;
 	--transition: .35s ease;
@@ -28,8 +28,69 @@ body{
 	box-sizing:border-box;
 }
 
+/* Header */
+.header_top{
+	color: #5b2b91;
+}
+
 /* Body */
 body{
 	background:var(--bg); /* Uses the value stored in the CSS variable --bg */
 	color:var(--text); /* Uses the --text color */
+}
+
+/* Navigation Bar */
+nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 25px 60px;
+}
+
+nav ul{
+	display:flex;
+	gap:40px;
+	list-style:none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: rgb(175, 143, 233);
+    text-decoration: none;   
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Middle Page */
+.hero{
+	min-height:90vh;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	text-align:center;
+}
+
+/* Explore Our Mission Button */
+.button{
+	display: inline-block;
+	background: var(--accent);
+	color: var(--text);
+
+	padding: 10px 14px;
+	border-radius: 7px;
+	text-decoration: none;
+	transition: var(--transition);
+}
+
+.button:hover {
+	transform: translateY(-3px);
 }
